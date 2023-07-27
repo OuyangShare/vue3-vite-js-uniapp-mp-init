@@ -1,0 +1,41 @@
+{
+  "name": "mini-app-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "uni -p mp-weixin",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "lint": "eslint --fix --ext .js,.ts,.vue src"
+  },
+  "lint-staged": {
+    "*.{js, ts, html, json, vue}": [
+      "yarn run lint",
+      "prettier --write"
+    ],
+    "*.{scss, css}": [
+      "csscomb --tty-mode",
+      "prettier --parser css --write"
+    ]
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-3080720230703001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "pinia": "2.0.36",
+    "sass": "^1.63.6",
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.3.2",
+    "@dcloudio/uni-automator": "3.0.0-3080720230703001",
+    "@dcloudio/uni-cli-shared": "3.0.0-3080720230703001",
+    "@dcloudio/uni-stacktracey": "3.0.0-3080720230703001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-3080720230703001",
+    "eslint": "^8.45.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "lint-staged": "^12.4.2",
+    "prettier": "^2.8.8",
+    "vite": "4.1.4"
+  }
+}
